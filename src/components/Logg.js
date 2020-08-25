@@ -11,7 +11,7 @@ class Logg extends Component {
       password: '',
       emailError: '',
       passwordError: '',
-      adress: "localhost:8333",
+      adress: "me-api.thisisabad.site",
       data: null,
       hits: [],
       submitta: 0
@@ -93,7 +93,7 @@ class Logg extends Component {
     //http://localhost:8333/logg
     //https://webhook.site/7ec34c58-bff5-4050-9201-4f83ab6dd210
     try {
-        await fetch('http://localhost:8333/login/login_user', {
+        await fetch('http://me-api.thisisabad.site/login/login_user', {
             method: 'post',
             headers: {
                 'Accept': 'application/json',

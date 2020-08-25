@@ -20,7 +20,7 @@ class PostReport extends Component {
       year: [],
       month: [],
       day: [],
-      adress: "localhost:8333",
+      adress: "me-api.thisisabad.site",
       data: null,
       hits: [],
       submitta: 0
@@ -109,7 +109,7 @@ class PostReport extends Component {
     //http://localhost:8333/logg
     //https://webhook.site/7ec34c58-bff5-4050-9201-4f83ab6dd210
     try {
-        let result = await fetch('http://localhost:8333/reports/create_update', {
+        let result = await fetch('http://me-api.thisisabad.site/reports/create_update', {
             method: 'post',
             headers: {
                 'Accept': 'application/json',

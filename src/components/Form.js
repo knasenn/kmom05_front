@@ -20,7 +20,7 @@ class Form extends Component {
       year: [],
       month: [],
       day: [],
-      adress: "localhost:8333",
+      adress: "me-api.thisisabad.site",
       data: null,
       hits: [],
       submitta: 0
@@ -122,7 +122,7 @@ class Form extends Component {
     //http://localhost:8333/logg
     //https://webhook.site/7ec34c58-bff5-4050-9201-4f83ab6dd210
     try {
-        await fetch('http://localhost:8333/register', {
+        await fetch('http://me-api.thisisabad.site/register', {
             method: 'post',
             headers: {
                 'Accept': 'application/json',

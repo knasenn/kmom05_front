@@ -3,34 +3,43 @@ import io from 'socket.io-client'
 import TextField from '@material-ui/core/TextField'
 import './App.css'
 
-const socket = io.connect('http://localhost:4000')
+//yes
+const socket = io.connect('134.122.73.207');
+// const socket = io.connect('localhost:8333');
 
 function Chat() {
-  const [state, setStaet] = useState({ message: '', name: '' })
+  const [state, setStaet] = useState({ message: '', name: '', time: '' })
   const [chat, setChat] = useState([])
 
   useEffect(() => {
-    socket.on('message', ({ name, message }) => {
-      setChat([...chat, { name, message }])
+    socket.on('message', ({ name, message, time }) => {
+      setChat([...chat, { name, message, time }])
+      console.log("useEffect");
     })
   })
 
   const onTextChange = e => {
     setStaet({ ...state, [e.target.name]: e.target.value })
+    console.log("onTextChange");
   }
 
   const onMessageSubmit = e => {
     e.preventDefault()
+    var d = new Date(); // for now
+    let time = d.getHours()+":"+d.getMinutes();
     const { name, message } = state
-    socket.emit('message', { name, message })
-    setStaet({ message: '', name })
+    socket.emit('message', { name, message, time })
+    setStaet({ message: '', name, time })
+    console.log("onMessageSubmit");
   }
 
   const renderChat = () => {
-    return chat.map(({ name, message }, index) => (
+    // var d = new Date(); // for now
+    // let time_now = d.getHours() + ":" +d.getMinutes();
+    return chat.map(({ name, message, time }, index) => (
       <div key={index}>
         <h3>
-          {name}: <span>{message}</span>
+          {name}({time}): <span>{message}</span>
         </h3>
       </div>
     ))

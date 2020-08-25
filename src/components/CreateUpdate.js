@@ -21,7 +21,7 @@ class CreateUpdate extends Component {
       year: [],
       month: [],
       day: [],
-      adress: "localhost:8333",
+      adress: "me-api.thisisabad.site",
       data: null,
       hits: [],
       submitta: 0,
@@ -111,7 +111,7 @@ class CreateUpdate extends Component {
     //http://localhost:8333/logg
     //https://webhook.site/7ec34c58-bff5-4050-9201-4f83ab6dd210
     try {
-        await fetch('http://localhost:8333/reports/', {
+        await fetch('http://me-api.thisisabad.site/reports/', {
             method: 'post',
             headers: {
                 'Accept': 'application/json',
@@ -171,7 +171,7 @@ class CreateUpdate extends Component {
       day: varDay
     })
     // Simple GET request using fetch
-    fetch('http://localhost:8333/login/test_user')
+    fetch('http://me-api.thisisabad.site/login/test_user')
         .then(response => response.json())
         .then(data => this.setState({ text: data.text, token: data.token }));
   }

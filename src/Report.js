@@ -23,7 +23,7 @@ class Report extends Component {
   componentDidMount() {
     // Simple GET request using fetch
     // fetch('https://me-api.thisisabad.site/reports/week/1')
-    fetch('http://localhost:8333/reports/week/1')
+    fetch('http://me-api.thisisabad.site/reports/week/1')
         .then(response => response.json())
         .then(data => this.setState({ text: data.text }));
   }
@@ -32,7 +32,7 @@ class Report extends Component {
   render() {
     return (
       <div className="content">
-        <h3><a href="https://github.com/knasenn/jsramverk">Github link</a></h3>
+        <h3><a href="https://github.com/knasenn/jsramverk">Github link!!</a></h3>
         <ReactMarkdown source={ this.state.text } />
       </div>
     )

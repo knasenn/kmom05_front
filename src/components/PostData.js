@@ -1,5 +1,5 @@
 export default function PostData(type, userData){
-  let baseUrl = "http://localhost:8333/";
+  let baseUrl = "me-api.thisisabad.site";
 
   return new Promise((resolve, reject) => {
     console.log("----userData-----");

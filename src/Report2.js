@@ -26,7 +26,7 @@ class Report2 extends Component {
   componentDidMount() {
     // Simple GET request using fetch
     // fetch('https://me-api.thisisabad.site/reports/week/2')
-    fetch('http://localhost:8333/reports/week/2')
+    fetch('http://me-api.thisisabad.site/reports/week/2')
         .then(response => response.json())
         .then(data => this.setState({ text: data.text }));
   }

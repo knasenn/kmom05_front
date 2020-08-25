@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 // import io from 'socket.io-client'
 
 
-import Me from './Me.js';
+
 import Chat from './Chat.js';
 import Report from './Report.js';
 import Report2 from './Report2.js';
@@ -26,9 +26,6 @@ const App = () => (
         <ul>
           <li>
             <Link to="/">Me</Link>
-          </li>
-          <li>
-            <Link to="/Chat">Chat</Link>
           </li>
           <li>
             <Link to="/report/week/1">Kmom01</Link>
@@ -54,8 +51,8 @@ const App = () => (
 
         </ul>
       </nav>
-      <Route exact path="/" component={Me} />
-      <Route exact path="/chat" component={Chat} />
+
+      <Route exact path="/" component={Chat} />
       <Route exact path="/report/week/1" component={Report} />
       <Route exact path="/report/week/2" component={Report2} />
       <Route exact path="/report/week/3" component={Report3} />
