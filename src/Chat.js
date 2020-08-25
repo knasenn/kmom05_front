@@ -54,6 +54,8 @@ function Chat() {
             name="name"
             onChange={e => onTextChange(e)}
             value={state.name}
+            id="outlined-multiline-static"
+            variant="outlined"
             label="Name"
           />
         </div>
@@ -67,10 +69,10 @@ function Chat() {
             label="Message"
           />
         </div>
-        <button>Send Message</button>
+        <button>Send</button>
       </form>
       <div className="render-chat">
-        <h6>Chat Log</h6>
+        <h6>Chat</h6>
         {renderChat()}
       </div>
     </div>
